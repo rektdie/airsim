@@ -1,8 +1,4 @@
-﻿#include <glad/glad.h>
-#include <GLFW/glfw3.h>
-#include <iostream>
-
-#include "airsim.h"
+﻿#include "airsim.h"
 
 int main() {
     glfwInit();
