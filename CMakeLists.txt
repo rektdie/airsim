@@ -14,9 +14,10 @@ project("airsim")
 find_package(glfw3 CONFIG REQUIRED)
 find_package(glad CONFIG REQUIRED)
 find_package(glm CONFIG REQUIRED)
+find_package(assimp CONFIG REQUIRED)
 
 add_executable(airsim "src/airsim.cpp" "src/airsim.h")
 
 set_property(TARGET airsim PROPERTY CXX_STANDARD 17)
 
-target_link_libraries(airsim PRIVATE glfw glad::glad glm::glm)
+target_link_libraries(airsim PRIVATE glfw glad::glad glm::glm assimp::assimp)

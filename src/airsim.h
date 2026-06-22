@@ -3,8 +3,11 @@
 
 #pragma once
 
+#include <iostream>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
-#include <iostream>
+#include <assimp/Importer.hpp>
+#include <assimp/scene.h>
+#include <assimp/postprocess.h>
 
 // TODO: Reference additional headers your program requires here.
