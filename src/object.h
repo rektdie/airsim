@@ -12,5 +12,7 @@ public:
 	bool Import(const std::string& path);
 
 private:
+	Assimp::Importer importer;
+
 	const aiScene* scene = nullptr;
 };
