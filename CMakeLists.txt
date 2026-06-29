@@ -16,7 +16,13 @@ find_package(glad CONFIG REQUIRED)
 find_package(glm CONFIG REQUIRED)
 find_package(assimp CONFIG REQUIRED)
 
-add_executable(airsim "src/airsim.cpp" "src/airsim.h")
+add_executable(airsim "src/airsim.cpp" "src/airsim.h" "src/object.h" "src/object.cpp")
+
+add_custom_command(TARGET airsim POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+    ${CMAKE_SOURCE_DIR}/assets
+    $<TARGET_FILE_DIR:airsim>/assets
+)
 
 set_property(TARGET airsim PROPERTY CXX_STANDARD 17)
 

@@ -1,6 +1,8 @@
 ﻿#include "airsim.h"
 
 int main() {
+    Object obj("assets/vaccine/vaccine.obj");
+
     glfwInit();
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
